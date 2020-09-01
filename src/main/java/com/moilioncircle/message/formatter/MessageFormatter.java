@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  * @author Baoyi Chen
  */
 public class MessageFormatter {
-	public String format(String pattern, @Nullable Object[] args) {
+	public String format(String str, @Nullable Object[] args) {
 		// TODO
 		return "";
 	}
