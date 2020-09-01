@@ -29,3 +29,13 @@
 * 通过src/test/java/com/moilioncircle/message/formatter/MessageFormatterTest进行测试
 * 如果clone到本地，可以使用 mvn clean package 进行测试
 * 如果fork到github，可以Pull Request，进行测试
+
+## 优化之后的内存分配对比图
+
+* 优化之前
+
+![img](./image/before.png)
+
+* 优化之后
+
+![img](./image/after.png)
