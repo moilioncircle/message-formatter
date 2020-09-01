@@ -16,6 +16,7 @@
 3. 使用`\`进行`{`, `}`的转义. `format("\\{\\}", new Object[]{"a"})`返回`{}`
 3. 使用`\`转义`\`自身. `format("\\\\", new Object[]{"a"})`返回`\`
 4. 可能仅存在`{`或者`}`. `format("{c", new Object[]{"a"})`返回`{c`
+5. 当args为null时. `format("{} {} {a}", null)`返回`{null} {null} {a}`
 
 更多测试用例参见[MessageFormatterTest](https://github.com/moilioncircle/message-formatter/blob/master/src/test/java/com/moilioncircle/message/formatter/MessageFormatterTest.java)
 

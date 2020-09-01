@@ -1,6 +1,6 @@
 package com.moilioncircle.message.formatter;
 
-import static org.junit.Assert.assertEquals;
+import static junit.framework.TestCase.assertEquals;
 
 import org.junit.Test;
 
