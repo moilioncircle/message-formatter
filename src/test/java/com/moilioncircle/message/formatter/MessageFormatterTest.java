@@ -13,6 +13,12 @@ public class MessageFormatterTest {
 		MessageFormatter formatter = new MessageFormatter();
 		
 		{
+			String pattern = null;
+			Object[] args = null;
+			assertEquals(null, formatter.format(pattern, args));
+		}
+		
+		{
 			String pattern = "a {} {} b";
 			Object[] args = null;
 			assertEquals("a null null b", formatter.format(pattern, args));

@@ -22,8 +22,8 @@ import javax.annotation.Nullable;
  * @author Baoyi Chen
  */
 public class MessageFormatter {
-	public String format(String str, @Nullable Object[] args) {
+	public @Nullable String format(@Nullable String str, @Nullable Object[] args) {
 		// TODO
-		return "";
+		return null;
 	}
 }
