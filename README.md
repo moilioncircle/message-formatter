@@ -14,12 +14,13 @@ public @Nullable String format(@Nullable String str, @Nullable Object[] args)
 ## 具体的答题要求
 
 1. 当`str`为`null`时， 返回`null`. `format(null, new Object[]{"a"})`返回`null`
-2. 当`str`不存在`{}`等pattern时，直接返回str. `format("abc", new Object[]{"a"})`返回`abc`
-3. 可能存在嵌套括号. `format("{{}}", new Object[]{"a"})`返回`{a}`
-4. 使用`\`进行`{`, `}`的转义. `format("\\{\\}", new Object[]{"a"})`返回`{}`
-5. 使用`\`转义`\`自身. `format("\\\\", new Object[]{"a"})`返回`\`
-6. 可能仅存在`{`或者`}`. `format("{c", new Object[]{"a"})`返回`{c`
-7. 当args为null时. `format("{} {} {a}", null)`返回`{null} {null} {a}`
+2. 当`args`为`null`或者`size < pattern`时. `format("{} {} {a}", null)`返回`{null} {null} {a}`
+3. 当`str`不存在`{}`等pattern时，直接返回str. `format("abc", new Object[]{"a"})`返回`abc`
+4. 可能存在嵌套括号. `format("{{}}", new Object[]{"a"})`返回`{a}`
+5. 使用`\`进行`{`, `}`的转义. `format("\\{\\}", new Object[]{"a"})`返回`{}`
+6. 使用`\`转义`\`自身. `format("\\\\", new Object[]{"a"})`返回`\`
+7. 可能仅存在`{`或者`}`. `format("{c", new Object[]{"a"})`返回`{c`
+
 
 更多测试用例参见[MessageFormatterTest](https://github.com/moilioncircle/message-formatter/blob/master/src/test/java/com/moilioncircle/message/formatter/MessageFormatterTest.java)
 
