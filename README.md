@@ -24,6 +24,19 @@ public @Nullable String format(@Nullable String str, @Nullable Object[] args)
 
 更多测试用例参见[MessageFormatterTest](https://github.com/moilioncircle/message-formatter/blob/master/src/test/java/com/moilioncircle/message/formatter/MessageFormatterTest.java)
 
+## 示例
+
+```java 
+format(null, new Object[]{"a"}) return null
+format("{} {} {a}", null) return "{null} {null} {a}"
+format("{} {} {a}", new Object[]{"b"}) return "{b} {null} {a}"
+format("abc", new Object[]{"a"}) return "abc"
+format("{{}}", new Object[]{"a"}) return "{a}"
+format("\\{\\}", new Object[]{"a"}) return "{}"
+format("\\{}", new Object[]{"a"}) return "{}"
+format("\\\\", new Object[]{"a"}) return "\"
+format("{c", new Object[]{"a"}) return "{c"
+```
 ## 答题建议
 
 * clone或fork成自己的repository
