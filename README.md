@@ -13,7 +13,7 @@ public @Nullable String format(@Nullable String str, @Nullable Object[] args)
 
 ## 具体的答题要求
 
-1. 当`str`为`null`时， 返回`null`. `format(null, new Object[]{"a"})`返回`null`
+1. 当`str`为`null`时, 返回`null`. `format(null, new Object[]{"a"})`返回`null`
 2. 当`args`为`null`或者`args.length < pattern length`时. `format("{} {} {a}", null)`返回`{null} {null} {a}`
 3. 当`str`不存在`{}`等pattern时，直接返回str. `format("abc", new Object[]{"a"})`返回`abc`
 4. 可能存在嵌套括号. `format("{{}}", new Object[]{"a"})`返回`{a}`
