@@ -4,7 +4,7 @@
 
 当使用`logback`做为`slf4j-api`的实现端打印日志时，我们通过[async-profiler](https://github.com/jvm-profiling-tools/async-profiler) 发现`logback`做类似  
 `logger.info("{} {}", value1, value2)`这样的log解析时的内存分配以及性能存在瓶颈.
-具体的解析代码见[MessageFormatter.arrayFormat](https://github.com/qos-ch/slf4j/blob/master/slf4j-api/src/main/java/org/slf4j/helpers/MessageFormatter.java#L179). 我们要实现一个高效的O(n)复杂度的算法替换`MessageFormatter.arrayFormat`.  
+具体的解析代码见[MessageFormatter.arrayFormat](https://github.com/qos-ch/slf4j/blob/master/slf4j-api/src/main/java/org/slf4j/helpers/MessageFormatter.java#L179). 我们要实现一个高效的O(n)复杂度的 [format](https://github.com/moilioncircle/message-formatter/blob/master/src/main/java/com/moilioncircle/message/formatter/MessageFormatter.java#L25) 方法替换`MessageFormatter.arrayFormat`.  
 需要实现的方法定义如下
 
 ```
