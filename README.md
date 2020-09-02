@@ -26,7 +26,8 @@ public @Nullable String format(@Nullable String str, @Nullable Object[] args)
 
 ## 示例
 
-```java 
+```java  
+
 format(null, new Object[]{"a"}) return null
 format("{} {} {a}", null) return "{null} {null} {a}"
 format("{} {} {a}", new Object[]{"b"}) return "{b} {null} {a}"
@@ -37,6 +38,7 @@ format("\\{\\}", new Object[]{"a"}) return "{}"
 format("\\{}", new Object[]{"a"}) return "{}"
 format("\\\\", new Object[]{"a"}) return "\"
 format("{c", new Object[]{"a"}) return "{c"
+
 ```
 ## 答题建议
 
